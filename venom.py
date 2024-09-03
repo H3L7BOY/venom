@@ -7,10 +7,10 @@ import certifi
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-TOKEN = '7527525916:AAH8lDrN62lbVBJSf4QD-fnv-EUdfpnR_zc'
+TOKEN = '7535192958:AAHTgtUSj1gAMHNq2worj_U0d4zMikpknJo'
 MONGO_URI = 'mongodb+srv://VENOMxCRAZY:CRAZYxVENOM@cluster0.ythilmw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tlsAllowInvalidCertificates=true'
-CHANNEL_ID = -1002224570220
-ADMIN_IDS = [5588464519]
+CHANNEL_ID = -1002220516386
+ADMIN_IDS = [5886463657]
 
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
@@ -108,7 +108,7 @@ def disapprove_user(message):
         )
         bot.send_message(message.chat.id, f"*User {target_user_id} disapproved and reverted to free.*", parse_mode='Markdown')
     except Exception as e:
-        bot.send_message(message.chat.id, "*shi se add kro na *", parse_mode='Markdown')
+        bot.send_message(message.chat.id, "*add properly *", parse_mode='Markdown')
         logging.error(f"Error in disapproving user: {e}")
 
 @bot.message_handler(commands=['Attack'])
