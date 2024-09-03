@@ -8,7 +8,7 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 TOKEN = '7535192958:AAHTgtUSj1gAMHNq2worj_U0d4zMikpknJo'
-MONGO_URI = 'postgresql://pepper:LAfhvdlTM6aQs-z1_kOCfw@mayhem-carp-16055.8nj.gcp-europe-west1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full'
+MONGO_URI = 'mongodb+srv://aphyrena:Jonitabot123_@pepper.n90dj.mongodb.net/?retryWrites=true&w=majority&appName=pepper'
 CHANNEL_ID = -1002220516386
 ADMIN_IDS = [5886463657]
 
