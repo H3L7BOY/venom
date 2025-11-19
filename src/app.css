@@ -1,0 +1,87 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.about, .projects, .contact, .skills {
+  min-height: 50vh;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+input, textarea, button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.skills {
+  background: #f4f4f4;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin: 1rem 0;
+}
+
+.skill-bar {
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #4caf50;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-links a {
+  margin: 0 1rem;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-container {
+    padding: 0 1rem;
+  }
+}
